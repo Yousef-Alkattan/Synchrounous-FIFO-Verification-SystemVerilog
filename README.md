@@ -103,27 +103,6 @@ The verification framework rigorously tests these features using **structured Sy
 
 ---
 
-### How to Run
-
-1. **Compile:**
-
-    ```tcl
-    vlog -f FIFO_files.list
-    ```
-
-2. **Simulate:**
-
-    ```tcl
-    vsim work.FIFO_top
-    ```
-
-3. **Run Simulation:**
-
-    ```tcl
-    do dofifo1.do
-    ```
-
----
 
 ## Conclusion
 
