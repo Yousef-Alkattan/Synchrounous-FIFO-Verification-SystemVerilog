@@ -4,7 +4,7 @@ This repository contains the complete SystemVerilog testbench and design files f
 
 ---
 
-## Introduction
+## 🔷 Introduction
 
 This project presents a **SystemVerilog-based testbench** for verifying a **synchronous FIFO buffer**.  
 A FIFO is a critical component in digital systems, acting as a temporary storage queue that manages data transfer between modules operating at different speeds or clock domains.
@@ -37,7 +37,14 @@ The verification framework rigorously tests these features using **structured Sy
 
 ## 📁 File Descriptions
 
-### 1. RTL & Test Top
+### 1. Project Reports
+
+- `Yousef_Alkattan_Project1_sv7....`:  
+  Includes all codes & Simulation Waveforms
+
+---
+
+### 2. RTL & Test Top
 
 - `FIFO.sv`:  
   The RTL design of the FIFO module under test & includes assertions.
@@ -47,7 +54,7 @@ The verification framework rigorously tests these features using **structured Sy
 
 ---
 
-### 2. Testbench Files
+### 3. Testbench Files
 
 #### 🧱 Testbench Components
 
@@ -71,16 +78,16 @@ The verification framework rigorously tests these features using **structured Sy
 
 ---
 
-### 3. Shared Package
+### 4. Shared Package
 
 - `shared_pkg.sv`:  
   Package containing common parameters, typedefs, and utilities used across testbench components.
 
 ---
 
-### 4. Do File & File List
+### 5. Do File & File List
 
-- `doffio1.do`:  
+- `dofifo1.do`:  
   ModelSim/Questa `.do` script for compiling and running the simulation.
 
 - `FIFO_files.list`:  
@@ -91,13 +98,38 @@ The verification framework rigorously tests these features using **structured Sy
 ## 🛠 Tools
 
 - **Language:** SystemVerilog
-- **Methodology:** Structured testbench (non-UVM)
-- **Simulator:** Mentor Questa / ModelSim
+- **Methodology:** Class-Based SystemVerilog
+- **Simulator:** QuestaSim / ModelSim
 
 ---
 
-## 🎯 How to Simulate
+### How to Run
 
 1. **Compile:**
-   ```tcl
-   vlog -f FIFO_files.list
+
+    ```tcl
+    vlog -f FIFO_files.list
+    ```
+
+2. **Simulate:**
+
+    ```tcl
+    vsim work.FIFO_top
+    ```
+
+3. **Run Simulation:**
+
+    ```tcl
+    do dofifo1.do
+    ```
+
+---
+
+## Conclusion
+
+This project demonstrates a **structured SystemVerilog testbench approach** to verify a robust FIFO module.
+
+Through assertions, coverage, and a self-checking scoreboard, it achieves high confidence in design correctness and protocol compliance.
+
+
+---
